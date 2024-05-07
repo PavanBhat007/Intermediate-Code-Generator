@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3 Address Code Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Intermediate Code Generator: Three Address Code</h1>
+        <label for="expression" class="label">Enter Expression:</label>
+        <input type="text" id="expression" placeholder="e.g., a = b * (c + d)"><br><br>
+        <div class="button-container">
+            <button class="button" onclick="generateCode()">Generate 3 Address Code</button>
+            <button class="button" onclick="generateQuadruples()">Generate Quadruples</button>
+            <button class="button" onclick="generateTriples()">Generate Triples</button>
+            <button class="button" onclick="info()">Info</button>
+        </div>
+        <br>
+        <label for="code" class="label">Output:</label><br>
+        <textarea id="output" readonly placeholder="Generated code will be displayed here"></textarea>
+    </div>
+    <div class="info-modal" id="modal">
+        <span class="close" id="close-btn" onclick="closeModal()">&times;</span>
+        <div class="info-section">
+            <h1>WHAT IS "3 ADDRESS" / 3AC?</h1>
+            <div class="info-container">
+                <p>
+                    Three-address code represents instructions where each instruction has at most three operands. 
+                    It's called "three-address" because it typically contains three addresses: one for the result and two for the operands.
+                    In this representation, temporary variables (like t1, t2) are often used to store intermediate values.
+                    Three-address code is simpler to analyze and optimize compared to the original high-level code.
+                </p>
+                <div class="snippet">
+                    <p>a = t1</p>
+                    <p>t0 = c * d</p>
+                    <p>t1 = b + t0</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="info-section">
+            <h1>WHAT ARE "QUADRUPLES"?</h1>
+            <div class="info-container">
+                <p>
+                    Quadruples are a specific type of 3AC where each instruction consists of 4 fields.
+                    They are: <b>operator, 2 operands and a result</b>
+                </p>
+                <div class="snippet">
+                    <p>(*, c, d, t0)</p>
+                    <p>(+, b, t0, t1)</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-section">
+            <h1>WHAT IS "TRIPLES"?</h1>
+            <div class="info-container">
+                <p>
+                    It is similar to the Quadruples, but with just 3 fields, which is similar to the base 3AC.
+                    The fields are: <b>operator, and the 2 operands</b>
+                </p>
+                <div class="snippet">
+                    <p>[*, c, d, t0]</p>
+                    <p>[+, b, t0, t1]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

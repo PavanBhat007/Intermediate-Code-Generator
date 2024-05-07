@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #3faad4, #182848);
+}
+
+.container, .info-modal {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 25%;
+}
+
+input[type="text"],
+textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: #4e95c5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.button:hover {
+    background-color: #296e9c;
+}
+
+.label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 8px;
+    display: block;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container .button {
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-modal {
+    visibility: hidden;
+    width: 40%;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.info-modal .info-section .snippet {
+    background-color: #424242;
+    text-align: center;
+    width: fit-content;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    margin-inline: auto;
+    margin-left: 10px;
+}
+
+.info-modal h1 {
+    font-size: large;
+    background-color: #4e95c5;
+    margin: 0;
+    padding: 3px;
+    border-radius: 10px;
+    color: black;
+    letter-spacing: 0.1em;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.info-container p {
+    flex: 70%;
+}
+
+.info-container div {
+    flex: 30%;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    font-weight: 900;
+    cursor: pointer;
+}
